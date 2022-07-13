@@ -51,6 +51,7 @@ function randomResponse() {
 
 
 //decisionmaking for the computer
+
 var computerSelection;
 var playerSelection;
 
@@ -64,6 +65,13 @@ function computerPlay() {
             return computerSelection = 'scissors';
         } 
 }
+
+//takes any upper or lowercase (or varieties) input strings and converts to lowercase
+function playerInput(){
+    playerSelection = playerSelection.toLowerCase();
+    return playerSelection;
+}
+
 
 
 /*
@@ -103,6 +111,9 @@ function singleGame() {
         console.log("...how did you do that?");
     } return outcome;
 }
+
+
+
 /* code before 'spork' of parameter within function call
 function singleGame() { 
     let computerSelection = 'rock';
