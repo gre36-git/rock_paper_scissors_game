@@ -64,23 +64,22 @@ function computerPlay() {
         }  
 }
 
-//decisionmaking---------figure out how to nest, and call, nested functions
-//-capitalize() needs to actually return a lowercased string instead of the complex
-//procedure currently returning first letter capitalized 
 
-
-
-//evaluation of human and computer choices for final outcome
-
-
-
-function computerPlay() {
-
-}
-
-var computerSelection /* not set to anything currently*/;
+/*
+Write a function that plays a single round of Rock Paper Scissors. The function should take two 
+parameters - the playerSelection and computerSelection - and then return a string that declares the 
+winner of the round like so: "You Lose! Paper beats Rock"
+Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or 
+any other variation).
+*/
+var computerSelection;
 var playerSelection;
-function evaluateChoices() { 
+
+
+
+function singleGame() { 
+    let computerSelection = 'rock';
+    let playerSelection = 'paper';
     if (computerSelection === 'rock' && playerSelection === 'paper') {
         outcome  = "You win! Paper beats rock!";
         console.log(outcome);
@@ -102,3 +101,7 @@ function evaluateChoices() {
         console.log("...how did you do that?");
     }
 }
+
+
+
+
