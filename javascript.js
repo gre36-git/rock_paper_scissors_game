@@ -48,12 +48,32 @@ function randomResponse() {
 
 
 
+/*
+Write a function that plays a single round of Rock Paper Scissors. The function should take two 
+parameters - the playerSelection and computerSelection - and then return a string that declares the 
+winner of the round like so: "You Lose! Paper beats Rock"
+Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or 
+any other variation).
+*/
 
+/*below, calling rockPaperScissors() will play a single game with the default value for playerSelection
+being 'rock'. The computer will provide a random choice and compare both. 
+I am not very happy about this format. I need to read and experiment more with nesting and calling functions
+with parameters.
 
-//decisionmaking for the computer
-
+*/
 var computerSelection;
 var playerSelection;
+
+function rockPaperScissors() {
+    playerSelection = 'rock';
+    computerPlay();
+    lowerCaseIt();
+    singleGame();
+    return outcome;
+}
+
+//================================================================================================
 
 function computerPlay() {
     let x = Math.floor(Math.random()*3) +1;
@@ -67,20 +87,15 @@ function computerPlay() {
 }
 
 //takes any upper or lowercase (or varieties) input strings and converts to lowercase
-function playerInput(){
+
+function lowerCaseIt(){
     playerSelection = playerSelection.toLowerCase();
     return playerSelection;
 }
 
 
 
-/*
-Write a function that plays a single round of Rock Paper Scissors. The function should take two 
-parameters - the playerSelection and computerSelection - and then return a string that declares the 
-winner of the round like so: "You Lose! Paper beats Rock"
-Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or 
-any other variation).
-*/
+
 
 function singleGame() { 
     
@@ -111,6 +126,7 @@ function singleGame() {
         console.log("...how did you do that?");
     } return outcome;
 }
+
 
 
 
