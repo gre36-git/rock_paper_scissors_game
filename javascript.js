@@ -51,17 +51,18 @@ function randomResponse() {
 
 
 //decisionmaking for the computer
-var computerChoice;
+var computerSelection;
+var playerSelection;
 
 function computerPlay() {
     let x = Math.floor(Math.random()*3) +1;
         if (x === 1) {
-            return computerChoice = 'rock';
+            return computerSelection = 'rock';
         } else if (x === 2) {
-            return computerChoice = 'paper';
+            return computerSelection = 'paper';
         } else {
-            return computerChoice = 'scissors';
-        }  
+            return computerSelection = 'scissors';
+        } 
 }
 
 
@@ -72,11 +73,37 @@ winner of the round like so: "You Lose! Paper beats Rock"
 Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or 
 any other variation).
 */
-var computerSelection;
-var playerSelection;
 
-
-
+function singleGame() { 
+    
+    if (computerSelection === 'rock' && playerSelection === 'paper') {
+        outcome  = "You win! Paper beats rock!";
+        console.log(outcome);
+    } else if (computerSelection === 'paper' && playerSelection === 'scissors') {
+        outcome = "You win! Paper beats rock!";
+        console.log(outcome);
+    } else if (computerSelection === 'scissors' && playerSelection === 'rock') {
+        outcome = "You win! Rock beats scissors!";
+        console.log(outcome);
+    } else if (computerSelection === 'paper' && playerSelection === 'rock') {
+        outcome = "You lose! Paper beats rock!";
+        console.log(outcome);
+    } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
+        outcome = "You lose! Scissors beats paper!";
+        console.log(outcome);
+    } else if (computerSelection === 'rock' && playerSelection === 'scissors') {
+        outcome = "You lose! Rock beats scissors!";
+    } else if (computerSelection === 'rock' && playerSelection === 'rock' ){
+        outcome = "It's a tie! Re-roll!"
+    } else if (computerSelection === 'paper' && playerSelection === 'paper' ){
+        outcome = "It's a tie! Re-roll!"
+    } else if (computerSelection === 'scissors' && playerSelection === 'scissors' ){
+        outcome = "It's a tie! Re-roll!"
+    } else {
+        console.log("...how did you do that?");
+    } return outcome;
+}
+/* code before 'spork' of parameter within function call
 function singleGame() { 
     let computerSelection = 'rock';
     let playerSelection = 'paper';
@@ -101,7 +128,7 @@ function singleGame() {
         console.log("...how did you do that?");
     }
 }
-
+*/
 
 
 
