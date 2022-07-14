@@ -28,7 +28,15 @@ RocK or any other variation).
 
 // steps 1-4 complete
 
+//takes any upper or lowercase (or varieties) input strings and converts to lowercase
 
+function lowerCaseIt(){
+    playerSelection = playerSelection.toLowerCase();
+    return playerSelection;
+}
+//================
+
+//for testing purposes, playerSelection is temporarily assigned "rock";
 let playerSelection = "rock";
 let computerSelection = computerPlay();
 
@@ -49,19 +57,19 @@ console.log(computerSelection);
 function playRound(playerSelection, computerSelection) {
     if (computerSelection === 'rock' && playerSelection === 'paper') {
         outcome  = "You win! Paper beats rock!";
-        console.log(outcome);
+        //console.log(outcome);
     } else if (computerSelection === 'paper' && playerSelection === 'scissors') {
         outcome = "You win! Paper beats rock!";
-        console.log(outcome);
+        //console.log(outcome);
     } else if (computerSelection === 'scissors' && playerSelection === 'rock') {
         outcome = "You win! Rock beats scissors!";
-        console.log(outcome);
+       //console.log(outcome);
     } else if (computerSelection === 'paper' && playerSelection === 'rock') {
         outcome = "You lose! Paper beats rock!";
-        console.log(outcome);
+        //console.log(outcome);
     } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
         outcome = "You lose! Scissors beats paper!";
-        console.log(outcome);
+        //console.log(outcome);
     } else if (computerSelection === 'rock' && playerSelection === 'scissors') {
         outcome = "You lose! Rock beats scissors!";
     } else if (computerSelection === 'rock' && playerSelection === 'rock' ){
@@ -150,12 +158,7 @@ function computerPlay() {
         } 
 }
 
-//takes any upper or lowercase (or varieties) input strings and converts to lowercase
 
-function lowerCaseIt(){
-    playerSelection = playerSelection.toLowerCase();
-    return playerSelection;
-}
 
 
 
